@@ -10,7 +10,7 @@ RUN docker-php-ext-install intl pdo_mysql
 RUN docker-php-ext-install sockets
 
 # grpc
-RUN pecl install grpc && docker-php-ext-enable grpc
+# RUN pecl install grpc && docker-php-ext-enable grpc
 
 # xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug
