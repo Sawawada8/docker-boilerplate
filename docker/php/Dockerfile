@@ -1,7 +1,7 @@
 FROM php:8.2-cli
 
 RUN apt-get update && \
-    apt-get install -y vim curl git zip unzip \
+    apt-get install -y vim curl git zip unzip procps \
         libicu-dev
 RUN docker-php-ext-install intl pdo_mysql
 
