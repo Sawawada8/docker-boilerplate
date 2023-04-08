@@ -1,0 +1,18 @@
+{
+    "intelephense.environment.phpVersion": "8.2.0",
+
+    // https://marketplace.visualstudio.com/items?itemName=recca0120.vscode-phpunit
+    // issue: https://github.com/recca0120/vscode-phpunit/issues/142#issuecomment-1440103696
+    "phpunit.command": "docker exec -t <container_name>-1 /bin/sh -c",
+    "phpunit.php": "php",
+    "phpunit.phpunit": "/app/vendor/bin/phpunit",
+    "phpunit.args": [
+      "-c",
+      "/app/phpunit.xml"
+    ],
+    "phpunit.paths": {
+      // ${pwd} (current directory) is mounted to /app
+      "${workspaceFolder}": "/app",
+      // ${workspaceFolder} is mapped to /app
+    },
+}
