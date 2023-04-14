@@ -14,6 +14,16 @@ services:
     tty: true
     working_dir: '/app'
 
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - 4566
+      - 4510-4559:4510-4559
+    environment:
+      AWS_ACCESS_KEY_ID: "test"
+      AWS_SECRET_ACCESS_KEY: "test"
+      AWS_DEFAULT_REGION: "us-east-1"
+
   mysql:
     image: 'mysql:8.0'
     ports:
